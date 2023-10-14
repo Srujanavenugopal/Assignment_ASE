@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Sentence</title>
+</head>
+<body>
+    <script>
+        function reverseWordsInSentence(sentence) {
+            const words = sentence.split(' ');
+            const reversedWords = words.map(reverseWord);
+            const reversedSentence = reversedWords.join(' ');
+            return reversedSentence;
+        }
+
+        function reverseWord(word) {
+            return word.split('').reverse().join('');
+        }
+
+        // Modify this line to set the sentence you want to reverse.
+        const inputSentence = "Enter your sentence here.";
+
+        if (inputSentence) {
+            const reversedSentence = reverseWordsInSentence(inputSentence);
+            alert("Reversed sentence: " + reversedSentence);
+        } else {
+            alert("No input provided.");
+        }
+    </script>
+</body>
+</html>
